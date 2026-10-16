@@ -1,0 +1,11 @@
+dist/*
+!dist/plugin.mjs
+node_modules/
+.secrets/
+.env
+*.env
+server/node_modules/
+server/dist/
+server/.tmp/
+examples/
+.DS_Store

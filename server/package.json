@@ -1,0 +1,12 @@
+{
+  "name": "lostfound-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "./node_modules/.pnpm/esbuild@0.28.2/node_modules/esbuild/bin/esbuild src/index.ts --bundle --platform=node --format=esm --target=node22 --external:node:sqlite --outfile=dist/server.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": { "viem": "2.51.3" },
+  "devDependencies": { "esbuild": "0.28.2", "typescript": "5.9.3", "@types/node": "24.12.2" }
+}

@@ -1,0 +1,18 @@
+[Unit]
+Description=Lost & Found API (PayBox plugin backend)
+After=network-online.target
+
+[Service]
+User=lostfound
+EnvironmentFile=/etc/lostfound.env
+ExecStart=/usr/bin/node --disable-warning=ExperimentalWarning /opt/lostfound/server.mjs
+Restart=always
+RestartSec=3
+MemoryMax=300M
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
